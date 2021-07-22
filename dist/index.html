@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list</title>
     <link rel="stylesheet" href="/others/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="/others/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/dist/styles.css">
 </head>
 <body>
@@ -15,23 +17,114 @@
         <i class="fas fa-user fa-2x"></i>
         <i class="fas fa-cog fa-2x"></i>
     </header>
-    <div class="main-content">
-        <aside>
-            <ul>
-                <li>Home</li>
-                <li>Daily Task</li>
-                <li>Weekly Task</li>
-                <li>Favorites</li>
-                <li>Projects</li>
-            </ul>
-        </aside>
+    <aside>
+        <ul>
+            <li class="d-flex flex-column">
+                    <i class="bi bi-house" style="font-size: 2rem;"></i>
+                    <p>Home</p>
+            </li>
+            <li class="d-flex flex-column">
+                <i class="bi bi-calendar-event" style="font-size: 2rem;"></i>
+                <p>Daily Task</p>
+            </li>
+            <li class="d-flex flex-column">
+                <i class="bi bi-calendar2-week" style="font-size: 2rem;"></i>
+                <p>Weekly Task</p>
+            </li>
+            <li class="d-flex flex-column">
+                <i class="bi bi-star" style="font-size: 2rem;"></i>
+                <p>Favorites</p>
+            </li>
+            <li class="d-flex flex-column">
+                <i class="bi bi-folder"></i>
+                <p>Projects</p>
+            </li>
+        </ul>
+    </aside>
     
-        <main>
-            <h1>Welcome User!</h1>
-        </main>
-    </div>
-  
+    <main>
+        <div class="container-fluid">
+            <div class="row mb-4">
+                <div class="col col-12">
+                    <h1>Welcome User!</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5 mb-4 me-3 d-flex justify-content-between p-0">
+                    <div class="card col-3 rct text-light">
+                        <div class="card-body">
+                            <p class="card-title text-center">Recently Completed Task</p>
+                            <hr>
+                        </div>
+                        <div class="card-text">
+                            <ul>
+                                <li>Go on a run</li>
+                                <li>vacuum the floor</li>
+                                <li>Do the dishes</li>
+                                <li>Wash my car</li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <div class="card col-3 rct text-light">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <P>Uncompleted Task</P>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-3 rct text-light">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <P>Upcoming Task</P>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                    <div class="card col-6 rct text-light">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <p>Projects</p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-5 rct text-light">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <p>Other</p>
+                                <hr>
+                            </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi 
+                                    repudiandae autem fugit nam, quisquam ratione nesciunt debitis omnis 
+                                    dignissimos sequi modi deleniti! Molestiae officia possimus, cupiditate
+                                    error dignissimos provident tenetur nulla nobis, assumenda rerum rem facilis 
+                                    minima cum aliquam quos sequi repellendus optio suscipit. Ea consequatur praesentium 
+                                    eaque quibusdam rem alias dolores, ipsa, officia possimus harum dolorum nostrum eos 
+                                    numquam voluptates sint eius itaque impedit non enim nisi aspernatur quo consequuntur 
+                                    autem quasi. Ab labore hic velit neque quod, consequuntur voluptatum dolorem atque 
+                                    provident. Ullam natus deserunt, quas magni reprehenderit quaerat, ab, beatae saepe 
+                                    commodi consequuntur eveniet a accusantium unde!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+         
+
+       
+    </main>
+  
+    <div id="content"></div>
     <script src="/dist/main.js"></script>
 </body>
 </html>
