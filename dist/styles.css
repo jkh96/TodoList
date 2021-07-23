@@ -81,12 +81,17 @@ aside li:last-child {
     height: 100%;
 }
 
-main h1 {
+/* main h1 {
     border-bottom: thin solid grey;
     color: white;
-}
+} */
 
 .rct {
     background-color: #242321;
+    border-radius: 10px;
+}
+
+.rct-info {
+    background-color: #0c89a1;
     border-radius: 10px;
 }
