@@ -15,6 +15,9 @@ function header() {
     i2.classList.add('fas', 'fa-user', 'fa-2x')
     i3.classList.add('fas', 'fa-cog', 'fa-2x')
 
+    // Create Text
+    headerH1.innerText = 'Todo List'
+
     // Append header to container
     htmlContainer.appendChild(headerDiv)
     headerDiv.appendChild(headerH1)

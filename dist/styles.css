@@ -19,6 +19,7 @@ header {
 header h1 {
     display: inline;
     flex-grow: 7;
+    padding-left: 30px;
 }
 
 header .fa-bell  {
@@ -59,7 +60,7 @@ aside ul {
     padding: 0;
 }
 
-aside li {
+ aside li {
     display: flex;
     height: 110px;
     border-bottom: 1px solid rgb(78, 78, 78);

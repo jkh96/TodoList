@@ -41,7 +41,7 @@ function home() {
         liProjectsI.style.fontSize = '2rem'
 
         // Create Aside Text
-        liHomeP.innerText = 'Home'
+        liHomeP.textContent = 'Home'
         liDTP.innerText = 'Daily Task'
         liWTP.innerText = 'Weekly Task'
         liFavP.innerText = 'Favorites'
@@ -51,20 +51,20 @@ function home() {
         htmlContainer.appendChild(asideDiv)
         asideDiv.appendChild(ul)
         ul.appendChild(liHome)
-        ul.appendChild(liHomeI)
-        ul.appendChild(liHomeP)
+        liHome.appendChild(liHomeI)
+        liHome.appendChild(liHomeP)
         ul.appendChild(liDT)
-        ul.appendChild(liDTI)
-        ul.appendChild(liDTP)
+        liDT.appendChild(liDTI)
+        liDT.appendChild(liDTP)
         ul.appendChild(liWT)
-        ul.appendChild(liWTI)
-        ul.appendChild(liWTP)
+        liWT.appendChild(liWTI)
+        liWT.appendChild(liWTP)
         ul.appendChild(liFav)
-        ul.appendChild(liFavI)
-        ul.appendChild(liFavP)
+        liFav.appendChild(liFavI)
+        liFav.appendChild(liFavP)
         ul.appendChild(liProjects)
-        ul.appendChild(liProjectsI)
-        ul.appendChild(liProjectsP)
+        liProjects.appendChild(liProjectsI)
+        liProjects.appendChild(liProjectsP)
 
 
         // Create Entire Main Section
@@ -123,7 +123,8 @@ function home() {
         // Create Card Section 1
         const card1Div = document.createElement('div')
         const card1Body = document.createElement('div')
-        const card1Title = document.createElement('p')
+        const card1Title = document.createElement('div')
+        const card1P = document.createElement('p')
         const card1HR = document.createElement('hr')
         const card1TextDiv = document.createElement('div')
         const card1UL = document.createElement('ul')
@@ -139,7 +140,7 @@ function home() {
         card1TextDiv.classList.add('card-text')
 
         // Add Card Section 1 Text
-        card1Title.innerText = 'Recently Completed Task'
+        card1P.innerText = 'Recently Completed Task'
         card1LI1.innerText = 'Go on a run'
         card1LI2.innerText = 'Vacuum the floor'
         card1LI3.innerText = 'Do the dishes'
@@ -149,6 +150,112 @@ function home() {
         cardColDiv.appendChild(card1Div)
         card1Div.appendChild(card1Body)
         card1Body.append(card1Title)
+        card1Title.append(card1P)
         card1Title.append(card1HR)
         card1Body.appendChild(card1TextDiv)
+        card1TextDiv.appendChild(card1UL)
+        card1UL.appendChild(card1LI1)
+        card1UL.appendChild(card1LI2)
+        card1UL.appendChild(card1LI3)
+        card1UL.appendChild(card1LI4)
+
+
+        // Create Card Section 2
+        const card2Div = document.createElement('div')
+        const card2Body = document.createElement('div')
+        const card2Title = document.createElement('div')
+        const card2P = document.createElement('p')
+        const card2HR = document.createElement('hr')
+
+        // Create Card Section 2 Classes
+        card2Div.classList.add('card', 'col-3', 'rct', 'text-light')
+        card2Body.classList.add('card-body')
+        card2Title.classList.add('card-title', 'text-center')
+
+        //  Add Card Card Section 2 Text
+        card2P.innerText = 'Upcompleted Task'
+
+        // Append Card Section 2 to Card Col
+        cardColDiv.appendChild(card2Div)
+        card2Div.appendChild(card2Body)
+        card2Body.append(card2Title)
+        card2Title.append(card2P)
+        card2Title.append(card2HR)
+
+
+        // Create Card Section 3
+        const card3Div = document.createElement('div')
+        const card3Body = document.createElement('div')
+        const card3Title = document.createElement('div')
+        const card3P = document.createElement('p')
+        const card3HR = document.createElement('hr')
+
+        // Create Card Section 3 Classes
+        card3Div.classList.add('card', 'col-3', 'rct', 'text-light')
+        card3Body.classList.add('card-body')
+        card3Title.classList.add('card-title', 'text-center')
+
+        //  Add Card Card Section 3 Text
+        card3P.innerText = 'Upcoming Task'
+
+        // Append Card Section 3 to Card Col
+        cardColDiv.appendChild(card3Div)
+        card3Div.appendChild(card3Body)
+        card3Body.append(card3Title)
+        card3Title.append(card3P)
+        card3Title.append(card3HR)
+
+        
+        // Create Card Section 4
+        const card4Div = document.createElement('div')
+        const card4Body = document.createElement('div')
+        const card4Title = document.createElement('div')
+        const card4P = document.createElement('p')
+        const card4HR = document.createElement('hr')
+
+        // Create Card Section 4 Classes
+        card4Div.classList.add('card', 'col-5', 'rct', 'text-light')
+        card4Body.classList.add('card-body')
+        card4Title.classList.add('card-title', 'text-center')
+
+        //  Add Card Card Section 4 Text
+        card4P.innerText = 'Projects'
+
+        // Append Card Section 4 to Card Col
+        cardRowDiv.appendChild(card4Div)
+        card4Div.appendChild(card4Body)
+        card4Body.append(card4Title)
+        card4Title.append(card4P)
+        card4Title.append(card4HR)
+
+
+        // Create Card Section 5
+        const card5Div = document.createElement('div')
+        const card5Body = document.createElement('div')
+        const card5Title = document.createElement('div')
+        const card5P = document.createElement('p')
+        const card5HR = document.createElement('hr')
+        const card5TextDiv = document.createElement('div')
+        const card5TextP = document.createElement('p')
+
+        // Create Card Section 5 Classes
+        card5Div.classList.add('card', 'col-5', 'rct', 'text-light')
+        card5Body.classList.add('card-body')
+        card5Title.classList.add('card-title', 'text-center')
+        card5TextDiv.classList.add('card-text')
+
+        //  Add Card Card Section 5 Text
+        card5P.innerText = 'Other'
+        card5TextP.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi repudiandae autem fugit nam, quisquam ratione nesciunt debitis omnis dignissimos sequi modi deleniti! Molestiae officia possimus, cupiditateerror dignissimos provident tenetur nulla nobis, assumenda rerum rem facilis minima cum aliquam quos sequi repellendus optio suscipit. Ea consequatur praesentium eaque quibusdam rem alias dolores, ipsa, officia possimus harum dolorum nostrum eos numquam voluptates sint eius itaque impedit non enim nisi aspernatur quo consequuntur autem quasi.'
+
+        // Append Card Section 5 to Card Col
+        cardRowDiv.appendChild(card5Div)
+        card5Div.appendChild(card5Body)
+        card5Body.append(card5Title)
+        card5Title.append(card5P)
+        card5Title.append(card5HR)
+        card5Body.appendChild(card5TextDiv)
+        card5TextDiv.appendChild(card5TextP)
 }
+
+export {home}
