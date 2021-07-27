@@ -1,34 +1,27 @@
 function taskcreator() {
     
-    const taskContainer = document.querySelector('.daily-task-container')
+    class Task {
+        constructor(name, description, date, priority, completed ){
+            this.name = name;
+            this.description = description;
+            this.date = date;
+            this.priority = priority
+            this.completed = completed
+        }
 
+    }
 
-    
-        const card3Div = document.createElement('div')
-        const card3Body = document.createElement('div')
-        const card3Title = document.createElement('div')
-        const card3P = document.createElement('p')
-        const card3HR = document.createElement('hr')
-
-        // Create Card Section 3 Classes
-        card3Div.classList.add('card', 'col-3', 'rct', 'mb-3')
-        card3Body.classList.add('card-body')
-        card3Title.classList.add('card-title', 'text-center')
-
-        //  Add Card Card Section 3 Text
-        card3P.innerText = 'Weekly Task'
-
-        // Append Card Section 3 to Card Col
-        taskContainer.appendChild(card3Div)
-        card3Div.appendChild(card3Body)
-        card3Body.append(card3Title)
-        card3Title.append(card3P)
-        card3Title.append(card3HR)
-
-        
-    
-
+    function getBookInfo() {
+        const taskName = document.querySelector('#Task-name').value
+        const taskdescrip = document.querySelector('#Description').value
+        const  taskDate = document.querySelector('#Date-picked').value
+        const priority = document.querySelector('#priority').value
+    }
         
 }
 
 export {taskcreator}
+
+
+// some code to use to populate date form. you will have to change the name testdate though
+// testdate.value = taskdate

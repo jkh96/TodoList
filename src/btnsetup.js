@@ -21,8 +21,6 @@ function btnSetup() {
      function dailypage() {
          deleteTab()
          dailyTask()
-         const btnAdd = document.querySelector('.btn-add')
-         btnAdd.addEventListener('click', taskcreator)
      }
 
      btnDT.addEventListener('click', dailypage)
