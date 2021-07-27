@@ -2,6 +2,10 @@ function home() {
         // Grab Content container
         let htmlContainer = document.getElementById('content')
 
+        // Home page active class 
+        let navHome = document.querySelector('.nav-Home')
+        navHome.classList.add('active')
+
 
         // Create Entire Main Section
 
@@ -25,7 +29,7 @@ function home() {
     
         // Create Welcome User Classes
         welcomeRowDiv.classList.add('row', 'mb-4')
-        welcomeColDiv.classList.add('col', 'col-12', 'text-light')
+        welcomeColDiv.classList.add('col', 'col-12', 'welcome-div', 'text-light')
 
         // Create Welcome User Text
         welcomeH1.innerText = 'Welcome User!'
@@ -63,7 +67,7 @@ function home() {
         const card5TextLI4 = document.createElement('li')
 
         // Create Card Section 5 Classes
-        card5Div.classList.add('card', 'col-5', 'me-3', 'mb-3', 'rct-info')
+        card5Div.classList.add('card', 'col-5', 'me-4', 'mb-3', 'rct-info')
         card5Body.classList.add('card-body')
         card5Title.classList.add('card-title', 'text-center')
         card5TextDiv.classList.add('card-text')
@@ -94,7 +98,7 @@ function home() {
         const cardColDiv = document.createElement('div')
 
         // Create Card Col Classes
-        cardColDiv.classList.add('col-5', 'mb-4', 'me-3', 'd-flex', 'justify-content-between', 'p-0')
+        cardColDiv.classList.add('col-5', 'mb-3', 'me-3', 'd-flex', 'justify-content-between', 'p-0')
 
         // Append card Col to Card Row
         cardRowDiv.appendChild(cardColDiv)
@@ -114,7 +118,7 @@ function home() {
         const card1LI4 = document.createElement('li')
 
         // Create Card Section 1 Classes
-        card1Div.classList.add('card', 'col-3', 'rct', 'text-light')
+        card1Div.classList.add('card', 'col-3', 'rct', 'mb-3')
         card1Body.classList.add('card-body')
         card1Title.classList.add('card-title', 'text-center')
         card1TextDiv.classList.add('card-text')
@@ -148,7 +152,7 @@ function home() {
         const card2HR = document.createElement('hr')
 
         // Create Card Section 2 Classes
-        card2Div.classList.add('card', 'col-3', 'rct', 'text-light')
+        card2Div.classList.add('card', 'col-3', 'rct', 'mb-3')
         card2Body.classList.add('card-body')
         card2Title.classList.add('card-title', 'text-center')
 
@@ -171,7 +175,7 @@ function home() {
         const card3HR = document.createElement('hr')
 
         // Create Card Section 3 Classes
-        card3Div.classList.add('card', 'col-3', 'rct', 'text-light')
+        card3Div.classList.add('card', 'col-3', 'rct', 'mb-3')
         card3Body.classList.add('card-body')
         card3Title.classList.add('card-title', 'text-center')
 
@@ -194,7 +198,7 @@ function home() {
         const card4HR = document.createElement('hr')
 
         // Create Card Section 4 Classes
-        card4Div.classList.add('card', 'col-5', 'rct', 'text-light')
+        card4Div.classList.add('card', 'col-5', 'rct', 'me-4')
         card4Body.classList.add('card-body')
         card4Title.classList.add('card-title', 'text-center')
 

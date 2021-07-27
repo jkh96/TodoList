@@ -10,20 +10,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/dist/styles.css">
 </head>
-<body>
-    <!-- <header>
+<body class="">
+    <header class="rct">
         <h1>Todo List</h1>
         <i class="fas fa-bell fa-2x"></i>
         <i class="fas fa-user fa-2x"></i>
         <i class="fas fa-cog fa-2x"></i>
     </header>
-    <aside>
+    <aside class="rct">
         <ul>
             <li class="d-flex flex-column">
                     <i class="bi bi-house" style="font-size: 2rem;"></i>
                     <p>Home</p>
             </li>
-            <li class="d-flex flex-column">
+            <li class="d-flex flex-column active">
                 <i class="bi bi-calendar-event" style="font-size: 2rem;"></i>
                 <p>Daily Task</p>
             </li>
@@ -41,90 +41,9 @@
             </li>
         </ul>
     </aside>
-    
+
+    <!-- Daily Task -->
     <main>
-        <div class="container-fluid">
-            <div class="row mb-4">
-                <div class="col col-12">
-                    <h1>Welcome User!</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-5 mb-4 me-3 d-flex justify-content-between p-0">
-                    <div class="card col-3 rct text-light">
-                        <div class="card-body">
-                            <p class="card-title text-center">Recently Completed Task</p>
-                            <hr>
-                        </div>
-                        <div class="card-text">
-                            <ul>
-                                <li>Go on a run</li>
-                                <li>vacuum the floor</li>
-                                <li>Do the dishes</li>
-                                <li>Wash my car</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card col-3 rct text-light">
-                        <div class="card-body">
-                            <div class="card-title text-center">
-                                <P>Uncompleted Task</P>
-                                <hr>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card col-3 rct text-light">
-                        <div class="card-body">
-                            <div class="card-title text-center">
-                                <P>Upcoming Task</P>
-                                <hr>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              
-                    <div class="card col-6 rct text-light">
-                        <div class="card-body">
-                            <div class="card-title text-center">
-                                <p>Projects</p>
-                                <hr>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card col-5 rct text-light">
-                        <div class="card-body">
-                            <div class="card-title text-center">
-                                <p>Other</p>
-                                <hr>
-                            </div>
-                            <div class="card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi 
-                                    repudiandae autem fugit nam, quisquam ratione nesciunt debitis omnis 
-                                    dignissimos sequi modi deleniti! Molestiae officia possimus, cupiditate
-                                    error dignissimos provident tenetur nulla nobis, assumenda rerum rem facilis 
-                                    minima cum aliquam quos sequi repellendus optio suscipit. Ea consequatur praesentium 
-                                    eaque quibusdam rem alias dolores, ipsa, officia possimus harum dolorum nostrum eos 
-                                    numquam voluptates sint eius itaque impedit non enim nisi aspernatur quo consequuntur 
-                                    autem quasi. Ab labore hic velit neque quod, consequuntur voluptatum dolorem atque 
-                                    provident. Ullam natus deserunt, quas magni reprehenderit quaerat, ab, beatae saepe 
-                                    commodi consequuntur eveniet a accusantium unde!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-         
-
-       
-    </main> -->
-  
-    <!-- <main>
         <div class="container-fluid">
             <div class="row mb-4">
                 <div class="col col-12 text-light">
@@ -135,20 +54,21 @@
 
             <div class="row">
                 <div class="col-6 d-flex flex-row flex-wrap justify-content-between">
-                    <div class="card col-3 rct text-light me-2 mb-3">
+                    <div class="card col-3 rct me-2 mb-3">
                         <div class="card-body">
-                            <div class="card-title text-center">
+                            <div class="card-title d-flex justify-content-between">
                                 <P>Uncompleted Task</P>
-                                <hr>
+                                <i class="bi bi-circle "></i>
                             </div>
+                            <hr>
                             <div class="card-text">
-                                <input type="date">
+                                <input type="date" class="input-date">
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro consectetur voluptatem sunt facere nulla, iusto ea fuga natus fugiat laborum?</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card col-3 rct text-light me-2 mb-3">
+                    <div class="card col-3 rct me-2 mb-5">
                         <div class="card-body">
                             <div class="card-title text-center">
                                 <P>Uncompleted Task</P>
@@ -157,7 +77,7 @@
                         </div>
                     </div>
 
-                    <div class="card col-3 rct text-light me-2 mb-3">
+                    <div class="card col-3 rct  me-2 mb-5">
                         <div class="card-body">
                             <div class="card-title text-center">
                                 <P>Uncompleted Task</P>
@@ -166,7 +86,7 @@
                         </div>
                     </div>
 
-                    <div class="card col-3 rct text-light me-2 mb-3">
+                    <div class="card col-3 rct me-2 mb-5">
                         <div class="card-body">
                             <div class="card-title text-center">
                                 <P>Uncompleted Task</P>
@@ -175,7 +95,7 @@
                         </div>
                     </div>
 
-                    <div class="card col-3 rct text-light me-2 mb-3">
+                    <div class="card col-3 rct me-2 mb-5">
                         <div class="card-body">
                             <div class="card-title text-center">
                                 <P>Uncompleted Task</P>
@@ -184,7 +104,7 @@
                         </div>
                     </div>
 
-                    <div class="card col-3 rct text-light me-2 mb-3">
+                    <div class="card col-3 rct me-2 mb-5">
                         <div class="card-body">
                             <div class="card-title text-center">
                                 <P>Uncompleted Task</P>
@@ -193,7 +113,7 @@
                         </div>
                     </div>
 
-                    <div class="card col-3 rct text-light me-2 mb-3">
+                    <div class="card col-3 rct me-2 mb-5">
                         <div class="card-body">
                             <div class="card-title text-center">
                                 <P>Uncompleted Task</P>
@@ -201,20 +121,17 @@
                             </div>
                         </div>
                     </div>
-
-                    
-                    
 
                 </div>
 
                 <div class="col-6">
                     <div class="card rct-info">
-                        <div class="card-body">
+                        <div class="card-body text-dark">
                             <div class="card-title">
                                 <p>Daily Task Description</p>
                                 <hr>
                             </div>
-                            <div class="card-test">
+                            <div class="card-text">
                                 <p>Daily Task are a list of things that you need to take care of through out your day.
                                     You can set up those task here and view them to make sure you are keeping track of your task.
                                 </p>
@@ -224,18 +141,162 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="bc-info position-absolute bottom-0 end-0 pe-5 pb-2">
+                        <i class="bi bi-plus-circle-fill" style="font-size: 3rem;"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+        <!-- Weekly Task -->
+        <!-- <main>
+        <div class="container-fluid">
+            <div class="row mb-4">
+                <div class="col col-12 text-light">
+                    <h1>Weekly Task</h1>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 d-flex flex-row flex-wrap daily-task-container">
+                    <div class="card col-3 rct text-light me-5 mb-5">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <P>Uncompleted Task</P>
+                                <hr>
+                            </div>
+                            <div class="card-text">
+                                <input type="date">
+                                <p>Lorem ipsum dolor sit, amet5consectetur adipisicing elit. Porro consectetur voluptatem sunt facere nulla, iusto ea fuga natus fugiat laborum?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-3 rct text-light me-5 mb-5">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <P>Uncompleted Task</P>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-3 rct text-light me-5 mb-5">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <P>Uncompleted Task</P>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-3 rct text-light me-5 mb-5">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <P>Uncompleted Task</P>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-3 rct text-light me-5 mb-5">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <P>Uncompleted Task</P>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-3 rct text-light me-5 mb-5">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <P>Uncompleted Task</P>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-3 rct text-light me-5 mb-5">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <P>Uncompleted Task</P>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-6">
+                    <div class="card rct-info">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p>Weekly Task Description</p>
+                                <hr>
+                            </div>
+                            <div class="card-text">
+                                <p>Weekly Task are a list of things that you need to take care of through out your week.
+                                    You can set up those task here and view them to make sure you are keeping track of your task.
+                                </p>
+                                <p>In order to make sure you are keeping up with daily task, please make sure you mark them with
+                                    the week you need to complete it by.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bc-info position-absolute bottom-0 end-0 pe-5 pb-2">
+                        <i class="bi bi-plus-circle-fill" style="font-size: 3rem;"></i>
+                    </div>
                 </div>
 
             </div>
         </div>
     </main> -->
 
+    <!-- setting container -->
+    <div class="settings rct">
+        <p>Account</p>
+        <p>Features</p>
+        <p>History</p>
+        <p class="themes">Themes</p>
+        <hr>
+        <p>Sign Out</p>
+    </div>
+
+    <div class="themes-color rct">
+        <div class="theme-title">
+            <i class="bi bi-arrow-left-circle-fill ps-2 me-2" style="font-size: 1.75rem;"></i>
+            <p class="mb-0">Themes</p>
+        </div>
+        <hr>
+        <div class="theme-color-container">
+            <p class="theme-color-name">Dark Mode</p>
+            <div class="theme-dark"></div>
+        </div>
+        <hr>
+        <div class="theme-color-container">
+            <p class="theme-color-name">Light Mode</p>
+            <div class="theme-light"></div>
+        </div>
+        
+    </div>
+
     <div id="content"></div>
-    <script src="/dist/main.js"></script>
+    <!-- <script src="/dist/main.js"></script> -->
 
     <!-- Test without Webpack -->
     <!-- <script type="module" src="../src/index.js"></script> -->
+    <!-- <script src="../src/btncogsetup.js"></script> -->
+    <!-- <script src="../src/themecolor.js"></script> -->
 </body>
 </html>
 
 <!-- Template https://piaf-vue.coloredstrategies.com/app/dashboards/default -->
+
+
