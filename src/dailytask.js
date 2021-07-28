@@ -65,6 +65,10 @@ function dailyTask() {
     dtAddBtnDiv.classList.add("bc-info", 'position-absolute', 'bottom-0', 'end-0', 'pe-5', 'pb-2')
     dtAddBtnI.classList.add('bi', 'bi-plus-circle-fill', 'btn-add')
 
+    // add data attributes
+    dtAddBtnI.setAttribute('data-bs-toggle', 'modal')
+    dtAddBtnI.setAttribute('data-bs-target', '#staticBackdrop')
+
     // add styles
     dtAddBtnI.style.fontSize = '3rem'
 
