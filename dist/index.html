@@ -62,8 +62,12 @@
                             </div>
                             <hr>
                             <div class="card-text">
-                                <input type="date" class="input-date">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro consectetur voluptatem sunt facere nulla, iusto ea fuga natus fugiat laborum?</p>
+                                <input type="date" class="input-date" >
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro consectetur voluptatem sunt</p>
+                            </div>
+                            <div class="btn-icon d-flex justify-content-end">
+                                <i class="bi bi-pencil-square"></i>
+                                <i class="bi bi-trash ms-3"></i>
                             </div>
                         </div>
                     </div>
@@ -289,8 +293,8 @@
         </div>
         
     </div>
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="staticBackdropLabel">Task Creator</h5>
@@ -299,12 +303,41 @@
             <div class="modal-body d-flex flex-column">
                 <label for="Task-name">Please enter the name of your task</label>
               <input type="text" id="Task-name" placeholder="Task Name" required class="mb-2">
-              <label for="Description">Please enter a description of your task (Limit: 141 characters)</label>
-              <textarea class="mb-2" name="Description" id="Description" cols="1" rows="3" maxlength="141" placeholder="Task Description"></textarea>
+              <label for="Description">Please enter a description of your task (Limit: 91 characters)</label>
+              <textarea class="mb-2" name="Description" id="Description" cols="1" rows="3" maxlength="91" placeholder="Task Description"></textarea>
               <label for="pick-date">Please choose a date that this task needs to be completed by</label>
               <input class="mb-2" type="date" name="pick-date" id="Date-picked">
               <label for="priority">Please specify whether this task is priority or not</label>
               <select name="priority" id="priority">
+                  <option value="selection">Please select an option</option>
+                  <option id="priority-0" value="none">Not Important</option>
+                  <option id="priority-1" value="important">Important</option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary create-task">Create Task</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="staticBackdropEdit" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Task Editor</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column">
+                <label for="Task-name">Please enter the name of your task</label>
+              <input type="text" id="Task-name-edit" placeholder="Task Name" required class="mb-2">
+              <label for="Description">Please enter a description of your task (Limit: 91 characters)</label>
+              <textarea class="mb-2" name="Description" id="Description-edit" cols="1" rows="3" maxlength="91" placeholder="Task Description"></textarea>
+              <label for="pick-date">Please choose a date that this task needs to be completed by</label>
+              <input class="mb-2" type="date" name="pick-date" id="Date-picked-edit">
+              <label for="priority">Please specify whether this task is priority or not</label>
+              <select name="priority" id="priority-edit">
                   <option value="selection">Please select an option</option>
                   <option id="priority-0" value="none">Not Important</option>
                   <option id="priority-1" value="important">Important</option>

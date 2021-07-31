@@ -126,15 +126,20 @@ aside li:last-child {
 /* card setup and color variations */
 .card {
     position: relative;
-    height: 250px;
+    height: 270px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,.3),0 0  10px 1px rgba(0,0,0,.3);
     overflow: hidden;
 }
 
 .card-text {
-    height: 78%;
-    overflow-y: auto;
+    height: 152px
+    
+}
+
+.card-text p:first-child {
+    height: 72px
+    
 }
 
 .input-date {
@@ -163,6 +168,14 @@ aside li:last-child {
 
 .daily-task-container .card {
     margin-right: 5rem;
+}
+
+.bi-pencil-square {
+    cursor: pointer;
+}
+
+.bi-trash {
+    cursor: pointer;
 }
 
 /* add button color varation */

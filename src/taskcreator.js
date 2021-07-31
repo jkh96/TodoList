@@ -1,14 +1,24 @@
 // function taskcreator() {
-    
-    class Task {
-        constructor(name, description, date, priority, completed ){
-            this.name = name;
-            this.description = description;
-            this.date = date;
-            this.priority = priority
-            this.completed = completed
-        }
+    import {format} from "date-fns"
+    // class Task {
+    //     constructor(name, description, date, priority, completed ){
+    //         this.name = name;
+    //         this.description = description;
+    //         this.date = date;
+    //         this.priority = priority
+    //         this.completed = completed
+    //     }
 
+    // }
+    // let library = []
+    let id = -1
+    function Task(name, description, date, priority, completed) {
+        this.name = name;
+        this.description = description;
+        this.date = date;
+        this.priority = priority
+        this.completed = completed
+        this.id = id++
     }
 
     function taskbuilder(name, description, date, priority){
@@ -23,18 +33,29 @@
                 const card1textP = document.createElement('p')
                 const cardDate = document.createElement('p')
                 const cardprior = document.createElement('p')
+                const cardIconDiv = document.createElement('div')
+                const cardIconEdit = document.createElement('i')
+                const cardIconDelete = document.createElement('i')
         
                 // Create Card Section 1 Classes
                 card1Div.classList.add('card', 'col-3', 'rct', 'mb-3')
                 card1Body.classList.add('card-body')
                 card1Title.classList.add('card-title', 'text-center')
-                card1TextDiv.classList.add('card-text')
+                card1TextDiv.classList.add('card-text', 'mb-3')
+                cardIconDiv.classList.add('btn-icon', 'd-flex', 'justify-content-end')
+                cardIconEdit.classList.add('bi', 'bi-pencil-square')
+                cardIconDelete.classList.add('bi', 'bi-trash', 'ms-3')
+
+
+                // Add attributes
+                cardIconEdit.setAttribute('data-bs-toggle', 'modal')
+                cardIconEdit.setAttribute('data-bs-target', '#staticBackdropEdit')
         
                 // Add Card Section 1 Text
                 card1P.innerText = name
                 card1textP.innerText = description
                 cardDate.innerText = date
-                cardprior.innerText = priority
+                cardprior.innerText = `Priority: ${priority}`
         
                 // Append Cardsection 1 to  Card col
                 cardColDiv.appendChild(card1Div)
@@ -46,6 +67,13 @@
                 card1TextDiv.appendChild(card1textP)
                 card1TextDiv.appendChild(cardDate)
                 card1TextDiv.appendChild(cardprior)
+                card1Body.appendChild(cardIconDiv)
+                cardIconDiv.appendChild(cardIconEdit)
+                cardIconDiv.appendChild(cardIconDelete)
+
+                cardIconDelete.addEventListener('click', removeTask)
+                cardIconEdit.addEventListener('click', editTask)
+
     }
 
     export function getBookInfo() {
@@ -58,21 +86,59 @@
         if (taskName === "" || taskdescrip === "" || taskDate === "" || priority === "selection"){
             alert('please fill in all fields')
         } else {
-            alert('task created')
-            taskbuilder(taskName, taskdescrip, taskDate, priority)
-
+            const formattedDated = format(new Date(taskDate), 'MM/dd/yyyy')
+             taskbuilder(taskName, taskdescrip, formattedDated, priority)
+             const task = new Task(taskName, taskdescrip, formattedDated, priority, false)
+                setStorage(task)
+                console.log('making task');
+            
             document.querySelector('#Task-name').value = ""
             document.querySelector('#Description').value = ""
             document.querySelector('#Date-picked').value = ""
             document.querySelector('#priority').value = ""
+
+        }
+    }
+
+        function removeTask() {
+            this.parentElement.parentElement.parentElement.remove()
+            let task = getStorage()
+            // Removing the task from the storage 
+            // taskfor.forEach((task, index) => {
+            //     if t
+            // })
+            console.log('removing');
         }
 
-    }
-        
+        function editTask() {
+            document.querySelector('#Task-name-edit').value = this.name
+            document.querySelector('#Description-edit').value = this.description
+            document.querySelector('#Date-picked-edit').value = this.date
+            document.querySelector('#priority-edit').value = this.prior
+        }
+
+        function setStorage(task) {
+            let library = getStorage()
+            library.push(task)
+            localStorage.setItem("library", JSON.stringify(library))
+            console.log('setting storage');
+        }
+
+          function getStorage() {
+            let storage
+            if (localStorage.getItem('library') === null) {
+                storage = []
+            } else {
+                storage = JSON.parse(localStorage.getItem('library'))
+            }
+            console.log('get storage');
+            console.log(storage)
+            return storage
+        }
+
+        export function displayStorage() {
+            let storage = getStorage()
+            storage.forEach((task) => taskbuilder(task.name, task.description,task.date, task.priority))
+            console.log('display storage');
+        }
 // }
-
-// export {taskcreator}
-
-
-// some code to use to populate date form. you will have to change the name testdate though
-// testdate.value = taskdate
