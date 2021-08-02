@@ -11,13 +11,14 @@
 
     // }
     // let library = []
-    let id = -1
+    // let id = -1
     function Task(name, description, date, priority, completed) {
         this.name = name;
         this.description = description;
         this.date = date;
         this.priority = priority
         this.completed = completed
+        let id = -1
         this.id = id++
     }
 
@@ -82,15 +83,19 @@
         const  taskDate = document.querySelector('#Date-picked').value
         const priority = document.querySelector('#priority').value
 
+        let storage = getStorage()
         // validation 
         if (taskName === "" || taskdescrip === "" || taskDate === "" || priority === "selection"){
             alert('please fill in all fields')
+        }  else if (storage.some(task => task.name === taskName)) {
+            alert("choose new task name")
         } else {
-            const formattedDated = format(new Date(taskDate), 'MM/dd/yyyy')
+            // const formattedDated = format(new Date(taskDate), 'MM/dd/yyyy')
+            const formattedDated = new Date(taskDate)
              taskbuilder(taskName, taskdescrip, formattedDated, priority)
              const task = new Task(taskName, taskdescrip, formattedDated, priority, false)
                 setStorage(task)
-                console.log('making task');
+                console.log(task);
             
             document.querySelector('#Task-name').value = ""
             document.querySelector('#Description').value = ""

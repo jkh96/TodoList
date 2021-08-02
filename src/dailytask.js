@@ -1,3 +1,4 @@
+import {displayStorage} from '../src/taskcreator.js'
 function dailyTask() {
     // Grab Content container
     let htmlContainer = document.getElementById('content')
@@ -93,6 +94,9 @@ function dailyTask() {
     dtCardTextDiv.appendChild(dtCardTextP2)
     dtInfoColDiv.appendChild(dtAddBtnDiv)
     dtAddBtnDiv.appendChild(dtAddBtnI)
+
+    // document.addEventListener("load", displayStorage);
+    document.body.onload = displayStorage()
 }
 
 export {dailyTask}
